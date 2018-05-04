@@ -1,6 +1,8 @@
 package com.egartech;
 
 
+import java.util.Date;
+
 public class Product {
 
     private float cost;
@@ -9,10 +11,13 @@ public class Product {
 
     private float costDelivery;
 
-    public Product(float cost, int amount, float costDelivery) {
+    private Date date;
+
+    public Product(float cost, int amount, float costDelivery, Date date) {
         this.cost = cost;
         this.amount = amount;
         this.costDelivery = costDelivery;
+        this.date = date;
     }
 
     public float getCost() {
@@ -37,5 +42,13 @@ public class Product {
 
     public void setCostDelivery(float costDelivery) {
         this.costDelivery = costDelivery;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
     }
 }
