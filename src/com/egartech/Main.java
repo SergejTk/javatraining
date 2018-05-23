@@ -27,5 +27,23 @@ public class Main {
         for(Product product : calculator.sortByAmount(products)){
             System.out.println(product.getCost() + "           " + product.getAmount() + "        " + product.getCostDelivery());
         }
+
+        // ***  ДЗ от 21.05.2018  ч.2  ****
+        List<User> l1 = new ArrayList<User>();
+        List<User> l2 = new ArrayList<User>();
+
+        l1.add(new User("Smit", "111", "aaa"));
+        l1.add(new User("Bill", "222", "bbb"));
+        l1.add(new User("jony", "333", "ccc"));
+        l2.add(new User("Anny", "444", "ddd"));
+        l2.add(new User("jony", "333", "ccc"));
+        l2.add(new User("Fill", "555", "eee"));
+        l2.add(new User("Bill", "222", "bbb"));
+
+        List<User> jointUsers = new UsersAction().getJointUsers(l1,l2);
+        System.out.println("   Общие клиенты :");
+        for(User user : jointUsers) {
+            System.out.println(user.getUsername() + "   " + user.getPassword() + "   " + user.getEmail());
+        }
     }
 }
